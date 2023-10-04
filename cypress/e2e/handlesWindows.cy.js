@@ -20,6 +20,9 @@ describe('Browser Window Buttons', () => {
 
       // Assert that the 'open' method was called (indicating a new tab/window attempt)
       cy.get('@windowOpen').should('be.called');
+
+       // Capture a screenshot after clicking "New Tab"
+      cy.screenshot('new_tab');
   });
 
   // Test case to verify the functionality of the "New Window" button
@@ -34,6 +37,9 @@ describe('Browser Window Buttons', () => {
 
       // Assert that the 'open' method was called
       cy.get('@windowOpen').should('be.called');
+
+      // Capture a screenshot after clicking "New Window"
+      cy.screenshot('new_window');
   });
 
   // Test case to verify the functionality of the "New Window Message" button
@@ -48,5 +54,8 @@ describe('Browser Window Buttons', () => {
 
       // Assert that the 'open' method was called
       cy.get('@windowOpen').should('be.called');
+
+      // Capture a screenshot after clicking "New Window Message"
+      cy.screenshot('new_window_message');
   });
 });

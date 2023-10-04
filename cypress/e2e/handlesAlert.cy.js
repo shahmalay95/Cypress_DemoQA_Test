@@ -8,11 +8,15 @@ describe("Alert Test", () => {
   
       // Step 3: Click on the first 'Click me' button
       cy.get("#alertButton").click()
-  
+
       // Step 4: Submit the alert
       cy.on("window:alert", (str) => {
         expect(str).to.equal("You clicked a button")
+        
       })
+    // Capture a screenshot after clicking "Alert button"
+    cy.screenshot('Alert Test');
     })
+    
   })
   

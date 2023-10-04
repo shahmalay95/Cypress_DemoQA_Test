@@ -42,7 +42,9 @@ describe('Form Submission', () => {
 
         // Step 12: Click on Submit button
         cy.get('#submit').click()
-
+        
+        // Capture the screenshot of the form after clicking submit button
+        cy.screenshot("Form Submission");
 
     })
 

@@ -12,6 +12,9 @@ describe("Radio Button Test", () => {
       // Additional assertions if needed
       // For example, you can assert that the 'Yes' radio button is checked after clicking it
       cy.get("#yesRadio").should("be.checked")
+      
+      //Capture the screenshot after clicking the Radio Button
+      cy.screenshot("Radio Button");
+      
     })
   })
-  

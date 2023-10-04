@@ -8,10 +8,10 @@ describe("Checkbox Test", () => {
   
       // Step 3: Select the Home checkbox
       cy.get("#tree-node > ol > li > span > label").contains("Home").click()
-  
-      // Additional assertions if needed
-      // For example, you can assert that the checkbox is checked after clicking it
-    //   cy.get("#tree-node > ol > li > span > label").contains("Home").should("have.class", "rct-checkbox-checked")
+      
+      // Capture the screenshot after clicking Home checkbox
+      cy.screenshot("Checkbox Test");
+
     })
   })
   
